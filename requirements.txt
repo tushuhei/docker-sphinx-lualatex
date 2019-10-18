@@ -6,3 +6,7 @@ sphinxcontrib-blockdiag
 sphinxcontrib-nwdiag
 sphinxcontrib-seqdiag
 sphinxcontrib-actdiag
+sphinxcontrib-bibtex
+matplotlib
+scipy
+sklearn

@@ -18,8 +18,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NOWARNINGS yes
 ENV TEXLIVE_DEPS \
     xz-utils \
-    tar \
-    fontconfig
+    tar
 ENV TEXLIVE_PATH /opt/texlive
 ENV FONT_DEPS \
     unzip \
@@ -35,7 +34,7 @@ ENV PERSISTENT_DEPS \
 ENV PATH $TEXLIVE_PATH/bin/x86_64-linux:$PATH
 ENV SOURCE_HAN_SANS_URL https://github.com/adobe-fonts/source-han-sans/raw/release/SubsetOTF/SourceHanSansJP.zip
 ENV SOURCE_HAN_SERIF_URL https://github.com/adobe-fonts/source-han-serif/raw/release/SubsetOTF/SourceHanSerifJP.zip
-ENV TEXLIVE_URL http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+ENV TEXLIVE_URL http://ftp.jaist.ac.jp/pub/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz
 ENV SPHINX_DEPS \
     build-essential \
     zip
@@ -105,7 +104,7 @@ RUN apt-get install -y --no-install-recommends -q $TEXLIVE_DEPS \
       "option_doc 0" \
       "option_src 0" \
       > /tmp/install-tl-unx/texlive.profile \
-    && /tmp/install-tl-unx/install-tl -profile /tmp/install-tl-unx/texlive.profile
+    && /tmp/install-tl-unx/install-tl --repository=http://texlive.texjp.org/current/tlnet -profile /tmp/install-tl-unx/texlive.profile
 
 RUN tlmgr install ${TEX_PACKAGES} \
     && luaotfload-tool -u -vvv
