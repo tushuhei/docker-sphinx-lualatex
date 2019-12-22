@@ -106,6 +106,8 @@ RUN apt-get install -y --no-install-recommends -q $TEXLIVE_DEPS \
       > /tmp/install-tl-unx/texlive.profile \
     && /tmp/install-tl-unx/install-tl --repository=http://texlive.texjp.org/current/tlnet -profile /tmp/install-tl-unx/texlive.profile
 
+RUN apt-get install -y --no-install-recommends -q poppler-utils poppler-data
+
 RUN tlmgr install ${TEX_PACKAGES} \
     && luaotfload-tool -u -vvv
 
