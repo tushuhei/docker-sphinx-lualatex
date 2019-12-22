@@ -62,7 +62,8 @@ ENV TEX_PACKAGES \
     tabulary \
     varwidth \
     wrapfig \
-    capt-of
+    capt-of \
+    letltxmacro
 
 # Install basic dependencies and Sphinx dependencies
 RUN apt-get -qq update \
