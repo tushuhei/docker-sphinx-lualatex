@@ -10,3 +10,4 @@ sphinxcontrib-bibtex
 matplotlib
 scipy
 sklearn
+pymc3
