@@ -18,12 +18,12 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NOWARNINGS yes
 ENV TEXLIVE_DEPS \
     xz-utils \
-    tar
+    tar \
+    texlive-fonts-extra
 ENV TEXLIVE_PATH /opt/texlive
 ENV FONT_DEPS \
     unzip \
-    fontconfig \
-    texlive-fonts-extra
+    fontconfig
 ENV FONT_PATH /usr/share/fonts/
 ENV PERSISTENT_DEPS \
     wget \
