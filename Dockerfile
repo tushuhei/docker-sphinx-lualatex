@@ -65,6 +65,7 @@ ENV TEX_PACKAGES \
     wrapfig \
     capt-of \
     letltxmacro \
+    bbm \
     bbm-macros
 
 # Install basic dependencies and Sphinx dependencies
