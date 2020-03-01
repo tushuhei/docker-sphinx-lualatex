@@ -13,7 +13,7 @@
 # limitations under the License.
 
 FROM python:3.7.4-slim-buster
-LABEL maintainer Yoshi Yamaguchi <ymotongpoo+docker@gmail.com>
+LABEL maintainer Shuhei Iitsuka <tushuhei@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NOWARNINGS yes
 ENV TEXLIVE_DEPS \
@@ -22,7 +22,8 @@ ENV TEXLIVE_DEPS \
 ENV TEXLIVE_PATH /opt/texlive
 ENV FONT_DEPS \
     unzip \
-    fontconfig
+    fontconfig \
+    texlive-fonts-extra
 ENV FONT_PATH /usr/share/fonts/
 ENV PERSISTENT_DEPS \
     wget \
