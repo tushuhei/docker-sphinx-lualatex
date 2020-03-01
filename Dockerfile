@@ -64,7 +64,8 @@ ENV TEX_PACKAGES \
     varwidth \
     wrapfig \
     capt-of \
-    letltxmacro
+    letltxmacro \
+    bbm-macros
 
 # Install basic dependencies and Sphinx dependencies
 RUN apt-get -qq update \
