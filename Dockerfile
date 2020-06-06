@@ -66,7 +66,8 @@ ENV TEX_PACKAGES \
     capt-of \
     letltxmacro \
     bbm \
-    bbm-macros
+    bbm-macros \
+    pmboxdraw
 
 # Install basic dependencies and Sphinx dependencies
 RUN apt-get -qq update \
