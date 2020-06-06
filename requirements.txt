@@ -9,6 +9,4 @@ sphinxcontrib-actdiag
 sphinxcontrib-bibtex
 matplotlib
 scipy
-sklearn
-pymc3
 seaborn
