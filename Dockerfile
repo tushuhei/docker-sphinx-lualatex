@@ -76,8 +76,7 @@ RUN apt-get -qq update \
 
 # Install Sphinx and dependent pacakges
 COPY requirements.txt .
-COPY constraints.txt .
-RUN python3.7 -m pip install -r requirements.txt -c constraints.txt
+RUN python3.7 -m pip install -r requirements.txt
 
 # Setup fonts
 RUN mkdir -p $FONT_PATH && \
