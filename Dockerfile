@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM python:3.7.4-slim-buster
+FROM python:3.8.5-slim-buster
 LABEL maintainer Shuhei Iitsuka <tushuhei@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NOWARNINGS yes
@@ -109,7 +109,7 @@ RUN apt-get install -y --no-install-recommends -q $TEXLIVE_DEPS \
       > /tmp/install-tl-unx/texlive.profile \
     && /tmp/install-tl-unx/install-tl --repository=http://texlive.texjp.org/current/tlnet -profile /tmp/install-tl-unx/texlive.profile
 
-RUN apt-get update &apt-get install -y --no-install-recommends -q poppler-utils poppler-data
+RUN apt-get install -y --no-install-recommends -q poppler-utils poppler-data
 
 RUN tlmgr install ${TEX_PACKAGES} \
     && luaotfload-tool -u -vvv
