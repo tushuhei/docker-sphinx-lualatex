@@ -1,4 +1,4 @@
-Sphinx
-sphinxcontrib-bibtex
-matplotlib
-scipy
+Sphinx==3.0.4
+sphinxcontrib-bibtex==1.0.0
+matplotlib==3.2.1
+scipy==1.4.1
