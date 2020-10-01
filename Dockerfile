@@ -65,6 +65,7 @@ ENV TEX_PACKAGES \
     wrapfig \
     capt-of \
     letltxmacro \
+    xindy \
     bbm \
     bbm-macros
 
